@@ -183,11 +183,11 @@ class LPGMCalculator:
     
     def getFilteredAcceleration(self):
         # Returns the High-Pass filtered acceleration (recommended for PGA computation)
-        return self.accH
+        return self.accHF
     
     def getVelocity(self):
         # Returns the current 3D velocity
-        return self.velN
+        return self.vel
     
     def getMaxSva30(self):
         #Returns the maximum of the maximum Sva values of the last 30 seconds
