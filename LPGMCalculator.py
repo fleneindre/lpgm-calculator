@@ -161,21 +161,18 @@ class LPGMCalculator:
         # Compute JMA LPGM class from the last 30sec of Sva data 
         self.maxSva30 = np.max(self.maxSva)
         
-        if self.maxSva30 >= 100:
+        if self.maxSva30 < 5:
+            self.LPGM = 0
+        elif self.maxSva30 < 15:
+            self.LPGM = 1
+        elif self.maxSva30 < 50:
+            self.LPGM = 2
+        elif self.maxSva30 < 100:
+            self.LPGM = 3
+        else:
             self.LPGM = 4
-        else: 
-            if self.maxSva30 >= 50:
-                self.LPGM = 3
-            else: 
-                if self.maxSva30 >= 15:
-                    self.LPGM = 2
-                else:
-                    if self.maxSva30 >= 5:
-                        self.LPGM = 1
-                    else:
-                        self.LPGM = 0
-
         return self.LPGM
+
     
     def getSva(self):
         # Returns Absolute Response Velocity Spectrum from 1.6 to 7.8s with 0.2s increment
