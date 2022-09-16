@@ -6,7 +6,7 @@
 また、水平成分の絶対速度応答スペクトルを取得することもできます。これは、0.2秒刻みで1.6秒から7.8秒の範囲です。
 
 使用した方法は、*Nigam, Navin C. and Jennings, Paul C. (1969) Calculation of 
-response spectra from strong-motion earthquake records.*からのものです。
+response spectra from strong-motion earthquake records.* からのものです。
 
 読み取り値は、加速度計が建物の1階、または地面に接続された最も水平な面に配置されている場合にのみ有効です。
 サンプルレートは、時間の経過とともに一定である必要があります。
